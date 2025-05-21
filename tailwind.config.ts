@@ -10,6 +10,11 @@ const config: Config = {
       fontFamily: {
         mono: ["var(--font-ibm)", "monospace"],
       },
+      colors: {
+        muted: {
+          foreground: "#A4A5AD",
+        },
+      },
     },
   },
   plugins: [],
