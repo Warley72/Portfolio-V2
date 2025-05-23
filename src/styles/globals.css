@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -42,6 +43,11 @@
 }
 
 :root {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #09090b;
+  
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.13 0.028 261.692);

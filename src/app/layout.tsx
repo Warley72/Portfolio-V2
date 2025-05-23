@@ -8,7 +8,7 @@ const ibmPlex = IBM_Plex_Mono({
 });
 
 export const metadata = {
-  title: "Portfólio Carlos Warley",
+  title: "Carlos Warley | Developer",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
