@@ -15,7 +15,7 @@ export default function Home() {
         </Button>
       </div>
       <Card className="p-6 bg-zinc-950 border border-white/20">
-        <h1 className=" font-mono text-3xl font-bold text-white">Carlos Warley</h1>
+        <h1 className="font-mono text-3xl font-bold text-white">Carlos Warley</h1>
           <p className="font-mono text-2xl text-gray-400">Front-end Developer / Typescript & Lua</p>
         <Card className="flex bg-zinc-950 border-transparent">
           <h1 className="text-gray-500 text-2xl font-semibold uppercase">menu</h1>

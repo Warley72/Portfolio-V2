@@ -8,7 +8,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        mono: ["var(--font-ibm)", "monospace"],
+        mono: ["var(--font-geist-mono)", "monospace"],
       },
       colors: {
         muted: {
