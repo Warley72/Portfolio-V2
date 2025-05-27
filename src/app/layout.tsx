@@ -1,3 +1,4 @@
+import Footer from "@/components/layout/footer/Footer";
 import "../styles/globals.css";
 import { IBM_Plex_Mono } from "next/font/google";
 
@@ -23,7 +24,10 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt-br" className={geistMono.variable}>
-      <body className="font-mono">{children}</body>
+      <body className="font-mono">
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

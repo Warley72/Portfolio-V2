@@ -16,16 +16,16 @@ export default function Home() {
       </div>
       <Card className="p-6 bg-zinc-950 border border-white/20">
         <h1 className="font-mono text-3xl font-bold text-white">Carlos Warley</h1>
-          <p className="font-mono text-2xl text-gray-400">Front-end Developer / Typescript & Lua</p>
+          <p className="font-mono text-2xl text-[#A1A1AA]">Front-end Developer / Typescript & Lua</p>
         <Card className="flex bg-zinc-950 border-transparent">
-          <h1 className="text-gray-500 text-2xl font-semibold uppercase">menu</h1>
+          <h1 className="text-[#A1A1AA] text-2xl font-semibold uppercase">menu</h1>
           <nav className="flex flex-col">
             {[
               { label: "About", href: "/about" },
               { label: "Projects", href: "/projects" },
               { label: "Contact", href: "/Contact" },
             ].map(({ label, href }) => (
-              <Link className="flex items-center justify-between p-2 text-gray-500 rounded-sm hover:bg-zinc-800 hover:translate-x-1 transition duration-300" key={label} href={href}>
+              <Link className="flex items-center justify-between p-2 text-[#A1A1AA] rounded-sm hover:bg-zinc-800 hover:translate-x-1 transition duration-300" key={label} href={href}>
                 <span className="font-mono text-2xl">{label}</span>
                 <svg className="tabler-icon tabler-icon-chevron-right h-[1.25rem] w-[1.25rem] transition-transform" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 6l6 6l-6 6"></path></svg>
               </Link>
