@@ -1,30 +1,21 @@
 import Footer from "@/components/layout/footer/Footer";
 import "../styles/globals.css";
-import { IBM_Plex_Mono } from "next/font/google";
 
-import { Geist_Mono } from "next/font/google";
+import { Poppins } from "next/font/google";
 
-const geistMono = Geist_Mono({
+const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["400", "700"],
-  variable: "--font-geist-mono",
-});
-
-
-const ibmPlex = IBM_Plex_Mono({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"], 
-  variable: "--font-ibm",
-});
-
+  weight: ["400", "500", "600", "700"], 
+  variable: "--font-poppins",           
+})
 export const metadata = {
   title: "Carlos Warley | Developer",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="pt-br" className={geistMono.variable}>
-      <body className="font-mono">
+    <html lang="pt-br" className={poppins.variable}>
+      <body className="font-mono bg-zinc-950">
         {children}
         <Footer />
       </body>

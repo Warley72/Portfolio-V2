@@ -16,14 +16,14 @@ export default function Home() {
       </div>
       <Card className="p-6 bg-zinc-950 border border-white/20">
         <h1 className="font-mono text-3xl font-bold text-white">Carlos Warley</h1>
-          <p className="font-mono text-2xl text-[#A1A1AA]">Front-end Developer / Typescript & Lua</p>
+        <p className="font-mono text-2xl text-[#A1A1AA]">Front-end Developer / Typescript & Lua</p>
         <Card className="flex bg-zinc-950 border-transparent">
           <h1 className="text-[#A1A1AA] text-2xl font-semibold uppercase">menu</h1>
           <nav className="flex flex-col">
             {[
               { label: "About", href: "/about" },
               { label: "Projects", href: "/projects" },
-              { label: "Contact", href: "/Contact" },
+              { label: "Contact", href: "/contact" },
             ].map(({ label, href }) => (
               <Link className="flex items-center justify-between p-2 text-[#A1A1AA] rounded-sm hover:bg-zinc-800 hover:translate-x-1 transition duration-300" key={label} href={href}>
                 <span className="font-mono text-2xl">{label}</span>
@@ -34,12 +34,18 @@ export default function Home() {
         </Card>
 
         <footer>
-          <div className="w-full h-px bg-zinc-800 opacity-50"/>
-          <div className="flex items-center justify-center gap-4 py-4">
-            <img className="h-12 w-12 text-white p-2 rounded-md cursor-pointer hover:bg-zinc-800 transition duration-300" src="/github.svg" alt="github" />
-            <img className="h-12 w-12 text-white p-2 rounded-md cursor-pointer hover:bg-zinc-800 transition duration-300" src="/linkedin.svg" alt="linkedin" />
-            <img className="h-12 w-12 text-white p-2 rounded-md cursor-pointer hover:bg-zinc-800 transition duration-300" src="/discord.svg" alt="discord" />
-          </div>
+          <div className="w-full h-px bg-zinc-800 opacity-50" />
+            <div className="flex items-center justify-center gap-4 py-4">
+              <a href="https://github.com/Warley72" target="_blank" rel="noopener noreferrer">
+                <img className="h-12 w-12 text-white p-2 rounded-md cursor-pointer hover:bg-zinc-800 transition duration-300" src="/github.svg" alt="https://github.com/Warley72" />
+              </a>
+              <a href="https://www.linkedin.com/in/carlos-warley-106058229/" target="_blank" rel="noopener noreferrer">
+                <img className="h-12 w-12 text-white p-2 rounded-md cursor-pointer hover:bg-zinc-800 transition duration-300" src="/linkedin.svg" alt="linkedin" />
+              </a>
+              <a href="">
+                <img className="h-12 w-12 text-white p-2 rounded-md cursor-pointer hover:bg-zinc-800 transition duration-300" src="/discord.svg" alt="discord" />
+              </a>
+            </div>
         </footer>
       </Card>
     </div>

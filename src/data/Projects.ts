@@ -10,13 +10,19 @@ export const projects: ProjectCardProps [] = [
   {
     title: "FiveM System UI",
     description: "Interface system for Lua + React in FiveM.",
-    image: "/2.jpeg",
+    image: "/1.jpeg",
     year: "2024",
   },
   {
     title: "ProjetoX",
-    description: "Fullstack system with Node.js, Prisma and Next.js.",
-    image: "/3.jpeg",
+    description: "Fullstack system with Node.js.",
+    image: "/1.jpeg",
+    year: "2023",
+  },
+    {
+    title: "ProjetoXxx",
+    description: "Fullstack system .",
+    image: "/4.jpeg",
     year: "2023",
   },
 ];
