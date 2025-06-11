@@ -12,7 +12,7 @@ export default function Projects() {
           <Navigation />
           <h1 className="font-mono text-4xl font-bold mb-4">Projects</h1>
           <p className="text-lg text-[#A1A1AA] font-semibold mb-8">Explore my portfolio of client and personal projects.</p>
-          <Card className="p-4 bg-zinc-950 border border-white/20">
+          <Card className="bg-zinc-950 border border-white/20">
             <CardProjects projects={projects.slice(0, 3)} />
           </Card>
         </div>

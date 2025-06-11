@@ -1,9 +1,9 @@
 "use client"
+
 import { useState } from "react";
 import Navigation from "@/components/layout/navigation/Navigation";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { AnimatePresence, motion } from "framer-motion";
 import { PageTransition } from "@/components/layout/pageTransition/PageTransition";
 
 export default function About() {

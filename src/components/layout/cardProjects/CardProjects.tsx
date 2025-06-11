@@ -7,13 +7,12 @@ interface Props {
 
 export default function CardProjects({ projects }: Props) {
   return (
-    <div className="flex justify-center items-center gap-6 bg-zinc-950 min-h-screen p-6">
+    <div className="flex flex-col lg:flex-row justify-center items-center gap-6 bg-zinc-950 min-h-screen p-4">
       {projects.map((project, index) => (
         <div
           key={index}
-          className={`flex flex-col justify-between ${
-            index === 1 ? "w-[500px] h-[500px] " : "w-[300px] h-[350px] "
-          } border border-white/10 rounded-[30px] shadow-lg cursor-pointer transition-transform duration-300 ease-in-out hover:scale-102`}
+          className={`flex flex-col justify-between ${index === 1 ? "lg:w-[31.25rem] lg:h-[31.25rem]" : "lg:w-[18.75rem] lg:h-[21.875rem]"
+            } border border-white/10 rounded-[30px] shadow-lg cursor-pointer transition-transform duration-300 ease-in-out hover:scale-102`}
         >
           <div className="flex flex-col justify-between">
             <img className="rounded-t-[30px]" src={project.image} alt={project.title} />
