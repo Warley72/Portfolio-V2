@@ -36,7 +36,7 @@ export default function Navigation() {
                 Back
             </Link>
 
-            <nav className="hidden lg:flex gap-5 text-[#A1A1AA] font-mono">
+            <nav className="hidden lg:flex gap-5 text-[#A1A1AA] ">
                 {links.map(({ label, href }) => {
                     const isActive = pathname === href;
                     return (

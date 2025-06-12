@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { home } from "@/data/Home"
 
 export default function Home() {
   return (
@@ -8,17 +9,17 @@ export default function Home() {
       <div className="flex items-center justify-between w-full max-w-md mb-4">
         <Button className="bg-transparent hover:bg-transparent opacity-50 hover:opacity-100 transition duration-300 ease-in cursor-pointer">
           <svg className=" size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 21l18 0"></path><path d="M5 21v-14l8 -4v18"></path><path d="M19 21v-10l-6 -4"></path><path d="M9 9l0 .01"></path><path d="M9 12l0 .01"></path><path d="M9 15l0 .01"></path><path d="M9 18l0 .01"></path></svg>
-          <span className="text-white text-lg">Brasília, DF</span>
+          <span className="text-white text-lg">{home.local}</span>
         </Button>
         <Button className="bg-transparent hover:bg-zinc-800 opacity-50 hover:opacity-100 cursor-pointer transition duration-300 ease-in">
           <svg className="size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg>
         </Button>
       </div>
       <Card className="p-6 bg-zinc-950 border border-white/20">
-        <h1 className="font-mono text-3xl font-bold text-white">Carlos Warley</h1>
-        <p className="font-mono text-2xl text-[#A1A1AA]">Front-end Developer / Typescript & Lua</p>
+        <h1 className="font-mono text-3xl font-bold text-white">{home.name}</h1>
+        <p className="font-mono text-2xl text-[#A1A1AA]">{home.language}</p>
         <Card className="flex bg-zinc-950 border-transparent">
-          <h1 className="text-[#A1A1AA] text-2xl font-semibold uppercase">menu</h1>
+          <h1 className="text-[#A1A1AA] text-2xl font-semibold uppercase">{home.TitleMenu}</h1>
           <nav className="flex flex-col">
             {[
               { label: "About", href: "/about" },
