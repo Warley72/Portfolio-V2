@@ -60,7 +60,7 @@ export default function Navigation() {
                     <SheetContent side="left" className="bg-zinc-950 border-none text-white w-[250px]">
                         <div className="p-4 space-y-4">
                             <SheetHeader>
-                                <SheetTitle>Menu</SheetTitle>
+                                <SheetTitle></SheetTitle>
                             </SheetHeader>
                             <nav className="flex flex-col gap-4 font-mono">
                                 {links.map(({ label, href }) => {

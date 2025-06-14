@@ -20,9 +20,27 @@ export const projects: ProjectCardProps [] = [
     year: "2023",
   },
     {
-    title: "ProjetoXxx",
-    description: "Fullstack system .",
-    image: "/4.jpeg",
+    title: "ProjetoX11",
+    description: "Fullstack system with Node.js.",
+    image: "/1.jpeg",
+    year: "2023",
+  },
+    {
+    title: "ProjetoX22",
+    description: "Fullstack system with Node.js.",
+    image: "/1.jpeg",
+    year: "2023",
+  },
+    {
+    title: "ProjetoX33",
+    description: "Fullstack system with Node.js.",
+    image: "/1.jpeg",
+    year: "2023",
+  },
+    {
+    title: "ProjetoX44",
+    description: "Fullstack system with Node.js.",
+    image: "/1.jpeg",
     year: "2023",
   },
 ];
