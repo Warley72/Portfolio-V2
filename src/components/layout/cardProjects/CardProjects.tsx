@@ -9,8 +9,8 @@ export default function CardProjects({ projects }: Props) {
   return (
     <div className="flex flex-col lg:flex-row justify-center items-center gap-6 bg-zinc-950 min-h-screen p-4">
       {projects.map((project, index) => (
-        <div 
-          key={index} 
+        <div
+          key={index}
           className="flex flex-col justify-between w-full h-auto border border-white/10 rounded-[30px] shadow-lg cursor-pointer transition-transform duration-300 ease-in-out hover:scale-102">
           <div className="flex flex-col justify-between">
             <img className="rounded-t-[30px]" src={project.image} alt={project.title} />

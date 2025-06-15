@@ -1,7 +1,8 @@
 "use client"
 
 import { useState } from "react";
-import { about } from "@/data/About"
+import { Stack } from "@/data/Stack";
+import { about } from "@/data/About";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/layout/navigation/Navigation";
@@ -23,11 +24,12 @@ export default function About() {
                         <p className="text-lg text-white">{about.textAbout}</p>
                         <div className="w-full h-px bg-zinc-800 opacity-50" />
                         <h1 className="text-[#A1A1AA] text-base uppercase">{about.textTechnologies}</h1>
-                        <div className="flex items-center justify-center gap-x-2">
-                            <span className="text-white">HTML</span>
-                            <span className="text-white">CSS</span>
-                            <span className="text-white">TYPESCRIPT</span>
-                            <span className="text-white">REACT</span>
+                        <div className="flex flex-wrap items-center justify-center gap-x-2">
+                            {Stack.map((stack, index) => (
+                                <div key={index} className="">
+                                    <h1 className="text-white uppercase">{[stack.stack]}</h1>
+                                </div>
+                            ))}
                         </div>
                     </Card>
 
