@@ -9,11 +9,11 @@ export interface AboutProps {
     titleCarerr: string;
     dateCarerr: string;
     currentCarrer: string;
-    previousCareer: PreviousCareerProps[]; 
+    previousCareer: PreviousCareerProps[];
 }
 
 export interface PreviousCareerProps {
-  title: string;
-  company: string;
-  date: string;
+    title: string;
+    company: string;
+    date: string;
 }

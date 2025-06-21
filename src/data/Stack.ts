@@ -1,6 +1,6 @@
 import { StackProps } from "@/types/Stack";
 
-export const Stack: StackProps [] = [
+export const Stack: StackProps[] = [
     { stack: "HTML" },
     { stack: "CSS" },
     { stack: "TypeScript" },
