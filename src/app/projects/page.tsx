@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { projects } from "@/data/Projects";
+import { projects } from "@/mocks/Projects";
 import Navigation from "@/components/layout/navigation/Navigation";
 import CardProjects from "@/components/layout/cardProjects/CardProjects";
 import { PageTransition } from "@/components/layout/pageTransition/PageTransition";

@@ -1,10 +1,11 @@
 "use client"
 
 import { useState } from "react";
-import { Stack } from "@/data/Stack";
-import { about } from "@/data/About";
+import { Stack } from "@/mocks/Stack";
+import { about } from "@/mocks/About";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import Navigation from "@/components/layout/navigation/Navigation";
 import { PageTransition } from "@/components/layout/pageTransition/PageTransition";
 
@@ -18,17 +19,27 @@ export default function About() {
                     <Navigation />
                     <h1 className="text-4xl font-bold mb-4">{about.about}</h1>
                     <p className="text-lg text-[#A1A1AA] font-semibold mb-8">{about.subtext}</p>
+
                     <Card className="p-6 bg-zinc-950 border border-white/20">
                         <h1 className="text-[#A1A1AA] text-base uppercase">{about.textIntroduction}</h1>
                         <h1 className="text-3xl  text-white">{about.titleAbout}</h1>
                         <p className="text-lg text-white">{about.textAbout}</p>
                         <div className="w-full h-px bg-zinc-800 opacity-50" />
                         <h1 className="text-[#A1A1AA] text-base uppercase">{about.textTechnologies}</h1>
-                        <div className="flex flex-wrap items-center justify-center gap-x-2">
+                        <div className="flex flex-wrap items-center justify-center gap-4">
                             {Stack.map((stack, index) => (
-                                <div key={index} className="">
-                                    <h1 className="text-white uppercase">{[stack.stack]}</h1>
-                                </div>
+                                <Tooltip key={index}>
+                                    <TooltipTrigger asChild>
+                                        <img
+                                            src={`/iconsTec/${stack.icon}.svg`}
+                                            alt={stack.stack}
+                                            className="mt-2 w-14 h-14 cursor-pointer"
+                                        />
+                                    </TooltipTrigger>
+                                    <TooltipContent>
+                                        <p className="text-sm">{stack.stack}</p>
+                                    </TooltipContent>
+                                </Tooltip>
                             ))}
                         </div>
                     </Card>

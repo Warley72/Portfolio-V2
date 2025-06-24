@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { home } from "@/data/Home"
+import { home } from "@/mocks/Home"
 
 export default function Home() {
     return (
