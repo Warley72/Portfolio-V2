@@ -19,8 +19,8 @@ export default function Projects() {
                                 <CarouselContent>
                                     {projects.map((project, index) => (
                                         <CarouselItem key={index} className="flex justify-center items-center ">
-                                            <div className="flex justify-center items-center w-[31.25rem] h-[32.25rem]">
-                                                <CardProjects projects={[project]} />
+                                            <div className="flex justify-center items-center w-[25rem] h-[30rem]">
+                                                <CardProjects projects={[project]}/>
                                             </div>
                                         </CarouselItem>
                                     ))}

@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 
 interface Props {
     projects: ProjectCardProps[];
+    className?: string;
 }
 
 export default function CardProjects({ projects }: Props) {
