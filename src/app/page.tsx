@@ -1,16 +1,28 @@
 import Link from "next/link";
+import { getTemperature } from "@/lib/weather"
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { home } from "@/mocks/Home"
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 
-export default function Home() {
+export default async function Home() {
+
+    const temperature = await getTemperature();
+
     return (
         <div className="flex flex-col items-center justify-center p-4 min-h-screen bg-zinc-950">
             <div className="flex items-center justify-between w-full max-w-md mb-4">
-                <Button className="bg-transparent hover:bg-transparent opacity-50 hover:opacity-100 transition duration-300 ease-in cursor-pointer">
-                    <svg className=" size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 21l18 0"></path><path d="M5 21v-14l8 -4v18"></path><path d="M19 21v-10l-6 -4"></path><path d="M9 9l0 .01"></path><path d="M9 12l0 .01"></path><path d="M9 15l0 .01"></path><path d="M9 18l0 .01"></path></svg>
-                    <span className="text-white text-lg">{home.local}</span>
-                </Button>
+                <Tooltip>
+                    <TooltipTrigger asChild>
+                        <Button className="bg-transparent hover:bg-transparent opacity-50 hover:opacity-100 transition duration-300 ease-in cursor-pointer">
+                            <svg className=" size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 21l18 0"></path><path d="M5 21v-14l8 -4v18"></path><path d="M19 21v-10l-6 -4"></path><path d="M9 9l0 .01"></path><path d="M9 12l0 .01"></path><path d="M9 15l0 .01"></path><path d="M9 18l0 .01"></path></svg>
+                            <span className="text-white text-lg">{home.local}</span>
+                        </Button>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                        <p>{temperature}°C</p>
+                    </TooltipContent>
+                </Tooltip>
                 <Button className="bg-transparent hover:bg-zinc-800 opacity-50 hover:opacity-100 cursor-pointer transition duration-300 ease-in">
                     <svg className="size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg>
                 </Button>
