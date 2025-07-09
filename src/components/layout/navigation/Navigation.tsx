@@ -19,12 +19,12 @@ export default function Navigation() {
         <div className="flex items-center justify-between mb-12">
             <Link
                 href="/"
-                className="flex items-center gap-2 text-[#A1A1AA] hover:text-white transition duration-300"
+                className="flex items-center gap-2 text-[#A1A1AA] hover:text-white transition duration-300 text-lg"
             >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="15"
-                    height="15"
+                    width="16"
+                    height="16"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -43,7 +43,7 @@ export default function Navigation() {
                         <Link
                             key={href}
                             href={href}
-                            className={`transition duration-300 ${isActive ? "text-white" : "hover:text-white"
+                            className={`text-lg transition duration-300 ${isActive ? "text-white" : "hover:text-white"
                                 }`}
                         >
                             {label}
@@ -69,7 +69,7 @@ export default function Navigation() {
                                         <Link
                                             key={href}
                                             href={href}
-                                            className={`transition duration-300 ${isActive ? "text-white" : "text-[#A1A1AA] hover:text-white"
+                                            className={`text-lg transition duration-300 ${isActive ? "text-white" : "text-[#A1A1AA] hover:text-white"
                                                 }`}
                                         >
                                             {label}

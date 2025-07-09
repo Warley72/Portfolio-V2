@@ -25,7 +25,7 @@ export async function getTemperature(): Promise<number | null> {
     const data: WeatherApiResponse = await res.json();
     return data.current.temp_c;
   } catch (error) {
-    console.error("fez merda ao buscar temperatura:", error);
+    console.error("buscar temperatura:", error);
     return null;
   }
 }

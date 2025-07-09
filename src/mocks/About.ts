@@ -12,7 +12,9 @@ export const about: AboutProps = {
     the knowledge I've gained in both frontend and backend development, using technologies such as
     Node.js, Express, PostgreSQL, Prisma, and JWT-based authentication. I am currently seeking to further
     develop my skills and grow professionally in the market.`,
+    curriculum: "curriculum",
     textTechnologies: "Technologies",
+    studytechnology: "Studying back-end technologies",
     textCareer: "Career",
     titleCarerr: "Front-end Developer Freelancer",
     dateCarerr: "November 2024 – Actual",

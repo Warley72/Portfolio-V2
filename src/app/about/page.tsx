@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import Navigation from "@/components/layout/navigation/Navigation";
 import { PageTransition } from "@/components/layout/pageTransition/PageTransition";
+import { FaEnvelopeOpenText } from "react-icons/fa";
 
 export default function About() {
     const [showPrevious, setShowPrevious] = useState(false);
@@ -25,7 +26,20 @@ export default function About() {
                         <h1 className="text-3xl  text-white">{about.titleAbout}</h1>
                         <p className="text-lg text-white">{about.textAbout}</p>
                         <div className="w-full h-px bg-zinc-800 opacity-50" />
-                        <h1 className="text-[#A1A1AA] text-base uppercase">{about.textTechnologies}</h1>
+                        <h1 className="flex items-center justify-center text-[#A1A1AA] text-base uppercase">{about.curriculum}</h1>
+                        <div className="flex flex-wrap items-center justify-center">
+                            <div className="flex items-center justify-center w-14 h-14 rounded-md bg-transparent hover:bg-zinc-800 opacity-50 hover:opacity-100 cursor-pointer transition duration-200 ease-in hover:scale-105">
+                                <a
+                                    href="/curriculoWarley.pdf"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center justify-center w-14 h-14 rounded-md bg-transparent hover:bg-zinc-800 opacity-50 hover:opacity-100 cursor-pointer transition duration-200 ease-in hover:scale-104"
+                                >
+                                    <FaEnvelopeOpenText className="text-white w-10 h-10" />
+                                </a>
+                            </div>
+                        </div>
+                        <h1 className="flex items-center justify-center text-[#A1A1AA] text-base uppercase">{about.textTechnologies}</h1>
                         <div className="flex flex-wrap items-center justify-center gap-4">
                             {Stack.map((stack, index) => (
                                 <Tooltip key={index}>
@@ -33,7 +47,7 @@ export default function About() {
                                         <img
                                             src={`/iconsTec/${stack.icon}.svg`}
                                             alt={stack.stack}
-                                            className="mt-2 w-14 h-14 cursor-pointer"
+                                            className="mt-2 w-14 h-14 cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105"
                                         />
                                     </TooltipTrigger>
                                     <TooltipContent>

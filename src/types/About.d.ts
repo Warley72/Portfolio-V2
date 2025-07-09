@@ -4,7 +4,9 @@ export interface AboutProps {
     textIntroduction: string;
     titleAbout: string;
     textAbout: string;
+    curriculum: string;
     textTechnologies: string;
+    studytechnology: string;
     textCareer: string;
     titleCarerr: string;
     dateCarerr: string;
