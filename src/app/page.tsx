@@ -50,7 +50,7 @@ export default async function Home() {
                     <div className="w-full h-px bg-zinc-800 opacity-50" />
                     <div className="flex items-center justify-center gap-4 py-4">
                         <a href="https://github.com/Warley72" target="_blank" rel="noopener noreferrer">
-                            <img className="h-12 w-12 text-white p-2 rounded-md cursor-pointer hover:bg-zinc-800 transition duration-300" src="/github.svg" alt="https://github.com/Warley72" />
+                            <img className="h-12 w-12 text-white p-2 rounded-md cursor-pointer hover:bg-zinc-800 transition duration-300" src="/github.svg" alt="github" />
                         </a>
                         <a href="https://www.linkedin.com/in/carlos-warley-106058229/" target="_blank" rel="noopener noreferrer">
                             <img className="h-12 w-12 text-white p-2 rounded-md cursor-pointer hover:bg-zinc-800 transition duration-300" src="/linkedin.svg" alt="linkedin" />

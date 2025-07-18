@@ -45,7 +45,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background-color: #09090b;
+  
 
   --radius: 0.625rem;
   --background: oklch(1 0 0);
@@ -123,4 +123,8 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+body {
+    background-color: #09090b;
 }
