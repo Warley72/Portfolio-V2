@@ -6,8 +6,8 @@ import { about } from "@/mocks/About";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
-import Navigation from "@/components/layout/navigation/Navigation";
-import { PageTransition } from "@/components/layout/pageTransition/PageTransition";
+import Navigation from "@/components/layout/Navigation";
+import { PageTransition } from "@/components/layout/PageTransition";
 import { FaEnvelopeOpenText } from "react-icons/fa";
 
 export default function About() {
@@ -30,7 +30,7 @@ export default function About() {
                         <div className="flex flex-wrap items-center justify-center">
                             <div className="flex items-center justify-center w-14 h-14 rounded-md bg-transparent hover:bg-zinc-800 opacity-50 hover:opacity-100 cursor-pointer transition duration-200 ease-in hover:scale-105">
                                 <a
-                                    href="/curriculoWarley.pdf"
+                                    href="/document/curriculoWarley.pdf"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex items-center justify-center w-14 h-14 rounded-md bg-transparent hover:bg-zinc-800 opacity-50 hover:opacity-100 cursor-pointer transition duration-200 ease-in hover:scale-104"
@@ -51,7 +51,7 @@ export default function About() {
                                         />
                                     </TooltipTrigger>
                                     <TooltipContent>
-                                        <p className="text-sm">{stack.stack}</p>
+                                        <p className="text-white text-sm">{stack.stack}</p>
                                     </TooltipContent>
                                 </Tooltip>
                             ))}

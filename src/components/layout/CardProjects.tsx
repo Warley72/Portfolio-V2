@@ -21,8 +21,8 @@ export default function CardProjects({ projects }: Props) {
                         </div>
                     </div>
                     <div className="flex justify-between p-4">
-                        <Button className="bg-transparent hover:bg-[#222224]">{project.year}</Button>
-                        <Button className="bg-transparent hover:bg-[#222224]">View Projects</Button>
+                        <Button className="text-white bg-transparent hover:bg-[#222224]">{project.year}</Button>
+                        <Button className="text-white bg-transparent hover:bg-[#222224]">View Projects</Button>
                     </div>
                 </div>
             ))}

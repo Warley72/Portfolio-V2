@@ -1,5 +1,5 @@
-import Navigation from "@/components/layout/navigation/Navigation";
-import { PageTransition } from "@/components/layout/pageTransition/PageTransition";
+import Navigation from "@/components/layout/Navigation";
+import { PageTransition } from "@/components/layout/PageTransition";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";

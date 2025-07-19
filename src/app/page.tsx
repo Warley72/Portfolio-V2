@@ -4,9 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { home } from "@/mocks/Home"
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import { ButtonDarkMode } from "@/components/layout/ButtonDarkMode";
 
 export default async function Home() {
-
     const temperature = await getTemperature();
 
     return (
@@ -20,12 +20,10 @@ export default async function Home() {
                         </Button>
                     </TooltipTrigger>
                     <TooltipContent>
-                        <p>{temperature}°C</p>
+                        <p className="text-white">{temperature}°C</p>
                     </TooltipContent>
                 </Tooltip>
-                <Button className="bg-transparent hover:bg-zinc-800 opacity-50 hover:opacity-100 cursor-pointer transition duration-300 ease-in">
-                    <svg className="size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg>
-                </Button>
+                <ButtonDarkMode />
             </div>
             <Card className="p-6 bg-zinc-950 border border-white/20">
                 <h1 className="font-mono text-3xl font-bold text-white">{home.name}</h1>
@@ -50,13 +48,13 @@ export default async function Home() {
                     <div className="w-full h-px bg-zinc-800 opacity-50" />
                     <div className="flex items-center justify-center gap-4 py-4">
                         <a href="https://github.com/Warley72" target="_blank" rel="noopener noreferrer">
-                            <img className="h-12 w-12 text-white p-2 rounded-md cursor-pointer hover:bg-zinc-800 transition duration-300" src="/github.svg" alt="github" />
+                            <img className="h-12 w-12 text-white p-2 rounded-md cursor-pointer hover:bg-zinc-800 transition duration-300" src="/socialIcons/github.svg" alt="github" />
                         </a>
                         <a href="https://www.linkedin.com/in/carlos-warley-106058229/" target="_blank" rel="noopener noreferrer">
-                            <img className="h-12 w-12 text-white p-2 rounded-md cursor-pointer hover:bg-zinc-800 transition duration-300" src="/linkedin.svg" alt="linkedin" />
+                            <img className="h-12 w-12 text-white p-2 rounded-md cursor-pointer hover:bg-zinc-800 transition duration-300" src="/socialIcons/linkedin.svg" alt="linkedin" />
                         </a>
-                        <a href="">
-                            <img className="h-12 w-12 text-white p-2 rounded-md cursor-pointer hover:bg-zinc-800 transition duration-300" src="/discord.svg" alt="discord" />
+                        <a href="https://www.instagram.com/warley02/" target="_blank" rel="noopener noreferrer">
+                            <img className="h-12 w-12 text-white p-2 rounded-md cursor-pointer hover:bg-zinc-800 transition duration-300" src="/socialIcons/instagram.svg" alt="discord" />
                         </a>
                     </div>
                 </footer>
