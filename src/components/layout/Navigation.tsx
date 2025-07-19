@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import { MenuIcon } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from "@/components/ui/sheet";
-import { MenuIcon } from "lucide-react";
 
 export default function Navigation() {
     const pathname = usePathname();
