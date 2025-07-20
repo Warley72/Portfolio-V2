@@ -19,7 +19,7 @@ export default function Navigation() {
         <div className="flex items-center justify-between mb-12">
             <Link
                 href="/"
-                className="flex items-center gap-2 text-[#A1A1AA] hover:text-white transition duration-300 text-lg"
+                className="flex items-center gap-2 text-[#A1A1AA] dark:text-[#A1A1AA] hover:!text-black dark:hover:!text-white transition duration-300 text-lg"
             >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -36,15 +36,16 @@ export default function Navigation() {
                 Back
             </Link>
 
-            <nav className="hidden lg:flex gap-5 text-[#A1A1AA] ">
+            <nav className="hidden lg:flex gap-5 text-[#A1A1AA] dark:text-[#A1A1AA]">
                 {links.map(({ label, href }) => {
                     const isActive = pathname === href;
                     return (
                         <Link
                             key={href}
                             href={href}
-                            className={`text-lg transition duration-300 ${isActive ? "text-white" : "hover:text-white"
-                                }`}
+                            className={`text-lg transition duration-300 ${ isActive? "text-black dark:text-white":
+                                "text-[#A1A1AA] dark:text-[#A1A1AA] hover:text-black dark:hover:text-white"}
+                                `}
                         >
                             {label}
                         </Link>
@@ -55,9 +56,9 @@ export default function Navigation() {
             <div className="lg:hidden">
                 <Sheet>
                     <SheetTrigger>
-                        <MenuIcon className="w-6 h-6 text-white cursor-pointer" />
+                        <MenuIcon className="w-6 h-6 cursor-pointer " />
                     </SheetTrigger>
-                    <SheetContent side="left" className="bg-zinc-950 border-none text-white w-[250px]">
+                    <SheetContent side="left" className=" border-none text-white w-[250px]">
                         <div className="p-4 space-y-4">
                             <SheetHeader>
                                 <SheetTitle></SheetTitle>
@@ -69,8 +70,9 @@ export default function Navigation() {
                                         <Link
                                             key={href}
                                             href={href}
-                                            className={`text-lg transition duration-300 ${isActive ? "text-white" : "text-[#A1A1AA] hover:text-white"
-                                                }`}
+                                            className={`text-lg transition duration-300 ${ isActive? "text-black dark:text-white":
+                                                "text-[#A1A1AA] dark:text-[#A1A1AA] hover:text-black dark:hover:text-white"}
+                                            `}
                                         >
                                             {label}
                                         </Link>
