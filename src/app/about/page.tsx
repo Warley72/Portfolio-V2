@@ -7,6 +7,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import Navigation from "@/components/layout/Navigation";
+import { motion, AnimatePresence } from "framer-motion";
 import { PageTransition } from "@/components/layout/PageTransition";
 import { FaEnvelopeOpenText } from "react-icons/fa";
 
@@ -75,21 +76,46 @@ export default function About() {
                         </div>
 
                         <div>
-                            <Button onClick={() => setShowPrevious(!showPrevious)} className="bg-transparent text-[#A1A1AA] cursor-pointer hover:bg-zinc-200 dark:hover:bg-[#222224] hover:text-black dark:hover:text-white transition duration-300">
+                            <Button
+                                onClick={() => setShowPrevious(!showPrevious)}
+                                className="bg-transparent text-[#A1A1AA] cursor-pointer hover:bg-zinc-200 dark:hover:bg-[#222224] hover:text-black dark:hover:text-white transition duration-300"
+                            >
                                 {showPrevious ? "Hide previous roles" : "Show previous roles"}
-                                <svg className={`ml-2 transition-transform duration-300 ${showPrevious ? "rotate-180" : ""}`} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="m6 9 6 6 6-6"></path></svg>
+                                <svg
+                                    className={`ml-2 transition-transform duration-300 ${showPrevious ? "rotate-180" : ""
+                                        }`}
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                >
+                                    <path d="m6 9 6 6 6-6"></path>
+                                </svg>
                             </Button>
-                            {showPrevious && (
-                                <div className="mt-4 space-y-6">
-                                    {about.previousCareer.map((carrer, index) => (
-                                        <div key={index}>
-                                            <h2 className="font-semibold text-lg">{carrer.title}</h2>
-                                            <p className="text-[#A1A1AA] text-lg">{carrer.company}</p>
-                                            <p className="text-[#A1A1AA] text-lg">{carrer.date}</p>
-                                        </div>
-                                    ))}
-                                </div>
-                            )}
+
+                            <AnimatePresence>
+                                {showPrevious && (
+                                    <motion.div
+                                        initial={{ opacity: 0, height: 0 }}
+                                        animate={{ opacity: 1, height: "auto" }}
+                                        exit={{ opacity: 0, height: 0 }}
+                                        transition={{ duration: 0.2 }}
+                                        className="overflow-hidden mt-4 space-y-6"
+                                    >
+                                        {about.previousCareer.map((carrer, index) => (
+                                            <div key={index}>
+                                                <h2 className="font-semibold text-lg">{carrer.title}</h2>
+                                                <p className="text-[#A1A1AA] text-lg">{carrer.company}</p>
+                                                <p className="text-[#A1A1AA] text-lg">{carrer.date}</p>
+                                            </div>
+                                        ))}
+                                    </motion.div>
+                                )}
+                            </AnimatePresence>
                         </div>
                     </Card>
                 </div>
