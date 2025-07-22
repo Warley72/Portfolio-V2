@@ -41,7 +41,7 @@ export default async function Home() {
                         ].map(({ label, href }) => (
                             <Link className="flex items-center justify-between p-2 rounded-sm transition duration-300 hover:bg-zinc-200 dark:hover:bg-zinc-800 hover:translate-x-1" key={label} href={href}>
                                 <span className="font-mono text-2xl">{label}</span>
-                                <svg className="tabler-icon tabler-icon-chevron-right h-[1.25rem] w-[1.25rem] transition-transform" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 6l6 6l-6 6"></path></svg>
+                                <svg className="tabler-icon tabler-icon-chevron-right h-[1.25rem] w-[1.25rem] transition-transform stroke-black dark:stroke-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 6l6 6l-6 6"></path></svg>
                             </Link>
                         ))}
                     </nav>
