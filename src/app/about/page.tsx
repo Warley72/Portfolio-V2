@@ -17,7 +17,7 @@ export default function About() {
     return (
         <PageTransition >
             <div className=" p-6 md:p-12">
-                <div className="max-w-6xl mx-auto">
+                <div className="max-w-5xl mx-auto">
                     <Navigation />
                     <h1 className="text-4xl font-bold mb-4">{about.about}</h1>
                     <p className="text-[#A1A1AA] text-lg font-semibold mb-8">{about.subtext}</p>
