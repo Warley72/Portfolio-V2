@@ -24,9 +24,9 @@ export const projects: ProjectCardProps[] = [
     },
         {
         id: 4,
-        title: "ProjetoX",
+        title: "Desafio Tecnico Trybe",
         description: "System under development with Node.js on the backend and Next.js on the frontend.",
         image: "/../projectImages/progress.png",
-        year: "2023",
+        year: "2025",
     },
 ];
