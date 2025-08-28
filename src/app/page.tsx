@@ -29,7 +29,7 @@ export default async function Home() {
                 <ButtonDarkMode />
             </div>
             <Card className="p-6 border stroke-black dark:stroke-white">
-                <h1 className="font-mono text-3xl font-bold ">{home.name}</h1>
+                <h1 className="text-center font-mono text-4xl font-bold">{home.name}</h1>
                 <p className="text-[#A1A1AA] font-mono text-2xl">{home.language}</p>
                 <Card className="text-[#A1A1AA] flex border-transparent">
                     <h1 className="text-[#A1A1AA] text-2xl font-semibold uppercase">{home.TitleMenu}</h1>
