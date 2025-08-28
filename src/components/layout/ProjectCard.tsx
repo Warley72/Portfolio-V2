@@ -9,7 +9,7 @@ export default function ProjectCard({ project }: Props) {
     return (
         <div className={`flex flex-col justify-between w-full h-auto border stroke-black dark:stroke-white rounded-[30px]  cursor-pointer transition-transform duration-300 ease-in-out hover:scale-102`}>
             <div className="flex flex-col justify-between">
-                <img className="rounded-t-[30px]" src={project.image} alt={project.title} />
+                <img className="rounded-t-[30px]" src={project.image} alt={project.title}/>
                 <div className="p-4">
                     <h1 className="text-2xl text-center mb-4">{project.title}</h1>
                     <p className="text-base">{project.description}</p>

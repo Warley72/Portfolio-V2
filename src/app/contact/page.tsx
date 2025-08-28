@@ -1,8 +1,8 @@
 "use client"
 
-import { z } from "zod"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
+import { authForm, AuthForm } from "@/schemas/authForm";
 
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -12,21 +12,14 @@ import { LuSend } from "react-icons/lu";
 
 import Navigation from "@/components/layout/Navigation";
 
-const schema = z.object({
-    name: z.string().min(2, 'Campo obrigatório'),
-    email: z.string().email('Campo obrigatório'),
-    message: z.string().min(5, 'A mensagem deve ter pelo menos 5 caracteres'),
-});
-
-type FormData = z.infer<typeof schema>;
-
 export default function Contact() {
-    const { register, handleSubmit, formState: { errors } } = useForm<FormData>({
-        resolver: zodResolver(schema),
+    const { register, handleSubmit, formState: { errors } } = useForm<AuthForm>({
+        resolver: zodResolver(authForm),
     });
-    const onSubmit = (data: FormData) => {
+    const onSubmit = (data: AuthForm) => {
         console.log(data);
     };
+
     return (
         <div className="p-6 md:p-12">
             <div className="max-w-5xl mx-auto">
