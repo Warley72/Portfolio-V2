@@ -1,4 +1,4 @@
-import { HomeProps } from "@/types/Home";
+import { HomeProps } from "@/interface/Home";
 
 export const home: HomeProps = {
     local: "Brasília, DF",

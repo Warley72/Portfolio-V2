@@ -1,4 +1,4 @@
-import { AboutProps } from "@/types/About";
+import { AboutProps } from "@/interface/About";
 
 export const about: AboutProps = {
     about: "About",

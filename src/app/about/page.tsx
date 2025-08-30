@@ -20,7 +20,6 @@ export default function About() {
                 <Navigation />
                 <h1 className="text-4xl font-bold mb-4">{about.about}</h1>
                 <p className="text-[#A1A1AA] text-lg font-semibold mb-8">{about.subtext}</p>
-
                 <Card className="p-6 border stroke-black dark:stroke-white">
                     <h1 className="text-base uppercase">{about.textIntroduction}</h1>
                     <h1 className="text-3xl">{about.titleAbout}</h1>

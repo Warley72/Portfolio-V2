@@ -1,4 +1,4 @@
-import { ProjectCardProps } from "@/types/CardProjects";
+import { ProjectCardProps } from "@/interface/ProjectCard";
 import { Button } from "@/components/ui/button";
 
 interface Props {
