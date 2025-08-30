@@ -1,5 +1,6 @@
 "use client"
 
+import { useState } from "react"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { authForm, AuthForm } from "@/schemas/authForm";
@@ -7,17 +8,25 @@ import { authForm, AuthForm } from "@/schemas/authForm";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-
 import { LuSend } from "react-icons/lu";
 
 import Navigation from "@/components/layout/Navigation";
 
 export default function Contact() {
-    const { register, handleSubmit, formState: { errors } } = useForm<AuthForm>({
+    const [loading, setLoading] = useState(false);
+
+    const { register, handleSubmit, formState: { errors }, reset } = useForm<AuthForm>({
         resolver: zodResolver(authForm),
     });
-    const onSubmit = (data: AuthForm) => {
+
+    const onSubmit = async (data: AuthForm) => {
+        setLoading(true);
         console.log(data);
+
+        await new Promise((resolve) => setTimeout(resolve, 2000));
+
+        reset();
+        setLoading(false);
     };
 
     return (
@@ -57,7 +66,7 @@ export default function Contact() {
                             )}
                         </div>
                         <Button className="flex items-center gap-2 px-4 py-2 font-medium bg-transparent text-[#A1A1AA] hover:bg-zinc-200 dark:hover:bg-[#222224] hover:text-black dark:hover:text-white border stroke-black dark:stroke-white transition duration-300 cursor-pointer rounded-md w-fit">
-                            <LuSend />Send Message
+                            <LuSend /> {loading ? "Enviando..." : "Send Message"}
                         </Button>
                     </form>
                 </Card>

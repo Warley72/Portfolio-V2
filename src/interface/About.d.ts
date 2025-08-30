@@ -13,7 +13,6 @@ export interface AboutProps {
     currentCarrer: string;
     previousCareer: PreviousCareerProps[];
 }
-
 export interface PreviousCareerProps {
     title: string;
     company: string;

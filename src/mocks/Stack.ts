@@ -1,4 +1,4 @@
-import { StackProps } from "@/types/Stack";
+import { StackProps } from "@/interface/Stack";
 
 export const Stack: StackProps[] = [
     { stack: "React", icon: "react" },

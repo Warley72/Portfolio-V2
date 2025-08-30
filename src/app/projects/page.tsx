@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { projects } from "@/mocks/Projects";
+import { projects } from "@/mocks/ProjectCard";
 import Navigation from "@/components/layout/Navigation";
 import EmblaCarousel from "@/components/layout/EmblaCarousel";
 

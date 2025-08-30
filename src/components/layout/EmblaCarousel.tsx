@@ -16,7 +16,7 @@ import {
 
 import "@/styles/embla.css"
 
-import { ProjectCardProps } from '@/types/CardProjects'
+import { ProjectCardProps } from '@/interface/ProjectCard'
 import ProjectCard from '@/components/layout/ProjectCard'
 
 const TWEEN_FACTOR_BASE = 0.52
