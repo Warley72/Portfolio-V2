@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getTemperature } from "@/lib/weather"
+import { getTemperature } from "@/services/weather"
 import { Card } from "@/components/ui/card";
 import { home } from "@/mocks/Home"
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";

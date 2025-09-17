@@ -16,7 +16,7 @@ export async function getTemperature(): Promise<number | null> {
             {
                 next: { revalidate: 60 },
             }
-        )
+        );
         if (!res.ok) {
             return null;
         }

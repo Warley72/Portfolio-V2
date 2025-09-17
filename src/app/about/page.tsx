@@ -29,7 +29,7 @@ export default function About() {
                     <div className="flex flex-wrap items-center justify-center">
                         <div className="flex items-center justify-center w-14 h-14 rounded-md hover:bg-zinc-200 dark:hover:bg-zinc-800 opacity-50 hover:opacity-100 cursor-pointer transition duration-200 ease-in hover:scale-105">
                             <a
-                                href="/document/curriculoWarley.pdf"
+                                href="/document/CVCarlosWarley.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex items-center justify-center w-14 h-14 rounded-md hover:bg-zinc-200 dark:hover:bg-zinc-800 opacity-50 hover:opacity-100 cursor-pointer transition duration-200 ease-in hover:scale-104"
